@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     model: openai("gpt-4o"),
     system: SYSTEM_PROMPT,
     messages: await convertToModelMessages(messages),
-    stopWhen: stepCountIs(3),
+    stopWhen: stepCountIs(5),
     tools: {
       present_options: tool({
         description:

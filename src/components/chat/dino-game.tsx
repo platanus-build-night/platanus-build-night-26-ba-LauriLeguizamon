@@ -136,9 +136,9 @@ export function DinoGame() {
       }
 
       // Collision
-      const dinoTop = GROUND_Y - DINO_H - Math.abs(s.dinoY);
+      const dinoBottom = GROUND_Y - Math.abs(s.dinoY);
+      const dinoTop = dinoBottom - DINO_H;
       const dinoRight = DINO_X + DINO_W;
-      const dinoBottom = GROUND_Y;
 
       for (const obs of s.obstacles) {
         const obsTop = GROUND_Y - obs.height;

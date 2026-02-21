@@ -44,7 +44,7 @@ export function ChatPage() {
   const scrapeConfirmedAtMsgCount = useRef<number | null>(null);
 
   const isLoading = status === "submitted" || status === "streaming";
-  const isEmpty = messages.length === 0;
+  const isEmpty = messages.length === 0 && !scrapeSession;
 
   // Extract photo options from update_photo_options tool calls in messages
   const photoOptionsFromMessages = useMemo<PhotoOptions>(() => {

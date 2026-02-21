@@ -1,6 +1,6 @@
 # Platanus Build Night ft. Anthropic
 
-## 2026 - Buenos Aires - Tiendanube Office
+## 2026 - Buenos Aires - Tiendanube Office ## 
 
 ---
 

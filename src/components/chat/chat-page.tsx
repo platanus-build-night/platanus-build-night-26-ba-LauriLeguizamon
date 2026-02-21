@@ -165,7 +165,7 @@ export function ChatPage() {
     const urls = extractUrls(text);
 
     if (urls.length > 0 && (!scrapeSession || scrapeSession.confirmed)) {
-      // When a store URL is detected, just start scraping without asking the AI anything
+      // Start scraping products from the URL
       const scrapeUrl = urls[0];
       setScrapeSession({
         active: true,
@@ -174,9 +174,9 @@ export function ChatPage() {
         confirmedProducts: [],
       });
       scraper.scrape(scrapeUrl);
-    } else {
-      sendWithContext(text);
     }
+
+    sendWithContext(text);
   }
 
   function handleScrapeConfirm(selected: { url: string; name: string }[]) {

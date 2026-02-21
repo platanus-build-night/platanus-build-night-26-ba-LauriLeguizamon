@@ -47,3 +47,4 @@ sqlite.db-shm
 
 # drizzle
 drizzle/
+.env*.local
